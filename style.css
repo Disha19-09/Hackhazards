@@ -1,0 +1,212 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwmFdBw4IsoXTy6OAbKksU27tPnpV3R4RM4Q&s') no-repeat center center/cover;
+  color: rgb(242, 245, 242);
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero button {
+  padding: 0.8rem 2rem;
+  background-color: #4CAF50;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+
+.product-section {
+  padding: 2rem;
+  background: white;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+}
+
+.product-card .price {
+  font-weight: 600;
+  color: #4CAF50;
+}
+
+.view-btn {
+  background-color: #4CAF50;
+  border: none;
+  padding: 0.8rem 2rem;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background-color: #45a049;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+.seller-form {
+  padding: 4rem 1rem;
+  background: #FFF8E1;
+}
+
+.seller-form form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.seller-form label {
+  text-align: left;
+  font-weight: 600;
+}
+
+.seller-form input, .seller-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #388E3C;
+}
+
+#formMessage {
+  margin-top: 0.5rem;
+  color: #2e7d32;
+  font-weight: 600;
+}
+@media screen and (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  header nav a {
+    margin: 0 0.5rem;
+  }
+
+  .product-card {
+    padding: 1rem;
+  }
+}
+
+
+footer {
+  background: #2e7d32;
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
