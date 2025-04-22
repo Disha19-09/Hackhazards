@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GramSetu – Rural E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">🌾 GramHaat</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#sell">Sell</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Connect with Rural Creators</h1>
+      <p>Discover handmade goods, organic produce, and more — straight from the source.</p>
+      <button onclick="scrollToProducts()">Explore Products</button>
+    </div>
+  </section>
+
+  <section id="products" class="product-section">
+    <h2>🌟 Featured Products</h2>
+    <div class="product-grid" id="productGrid">
+      <!-- Preloaded Products -->
+      <div class="product-card" data-name="Handwoven Jute Bag" data-price="₹500" data-desc="Eco-friendly jute bag made by women artisans in Bihar." data-img="https://source.unsplash.com/220x220/?handicraft">
+        <img src="handwoven bag.png" alt="Handwoven Bag" />
+        <h3>Handwoven Jute Bag</h3>
+        <p class="price">₹500</p>
+        <button class="view-btn" onclick="showDetails(this)">View Details</button>
+      </div>
+
+      <div class="product-card" data-name="Organic Forest Honey" data-price="₹350" data-desc="Pure honey collected from forests, packed with nutrients." data-img="https://source.unsplash.com/220x220/?organic,honey">
+        <img src="organic honey.png" alt="Organic Honey" />
+        <h3>Organic Forest Honey</h3>
+        <p class="price">₹350</p>
+        <button class="view-btn" onclick="showDetails(this)">View Details</button>
+      </div>
+
+      <div class="product-card" data-name="Handmade Clay Pots" data-price="₹299" data-desc="Beautiful clay pots made by skilled artisans." data-img="https://source.unsplash.com/220x220/?pottery">
+        <img src="https://m.media-amazon.com/images/I/71wY0wfudjL.jpg" alt="Clay Pot Set" />
+        <h3>Handmade Clay Pots</h3>
+        <p class="price">₹299</p>
+        <button class="view-btn" onclick="showDetails(this)">View Details</button>
+      </div>
+
+      <div class="product-card" data-name="Organic Millet Combo" data-price="₹220" data-desc="A combo of organic millets, grown locally." data-img="https://source.unsplash.com/220x220/?millet,grain">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ38u4RD3PpDU6P6mPRW7IxE1dMBYxHV9RzAA&s" alt="Millet Pack" />
+        <h3>Organic Millet Combo</h3>
+        <p class="price">₹220</p>
+        <button class="view-btn" onclick="showDetails(this)">View Details</button>
+      </div>
+
+      <div class="product-card" data-name="Bamboo Storage Basket" data-price="₹180" data-desc="Handcrafted bamboo basket, perfect for storage." data-img="https://source.unsplash.com/220x220/?basket,handmade">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_9Gs_rrO5mySRbEDRuL1UTmFhz-37YrLbDg&s" alt="Bamboo Basket" />
+        <h3>Bamboo Storage Basket</h3>
+        <p class="price">₹180</p>
+        <button class="view-btn" onclick="showDetails(this)">View Details</button>
+      </div>
+
+      <div class="product-card" data-name="Natural Herbal Soap" data-price="₹120" data-desc="Made with pure herbal ingredients, gentle on skin." data-img="https://source.unsplash.com/220x220/?soap,herbal">
+        <img src="https://www.ulamart.com/pub/media/catalog/product/u/l/ulamart-neem1.jpg" alt="Herbal Soap" />
+        <h3>Natural Herbal Soap</h3>
+        <p class="price">₹120</p>
+        <button class="view-btn" onclick="showDetails(this)">View Details</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="sell" class="seller-form">
+    <h2>🛍️ Become a Seller</h2>
+    <form id="sellerForm">
+      <label>Your Name</label>
+      <input type="text" id="sellerName" placeholder="e.g., Ramesh Kumar" required />
+
+      <label>Product Name</label>
+      <input type="text" id="productName" placeholder="e.g., Bamboo Basket" required />
+
+      <label>Product Description</label>
+      <textarea id="productDesc" placeholder="Describe your product..."></textarea>
+
+      <label>Price (₹)</label>
+      <input type="number" id="productPrice" placeholder="e.g., 300" required />
+
+      <label>Product Image URL (optional)</label>
+      <input type="url" id="productImg" placeholder="e.g., https://example.com/image.jpg" />
+
+      <button type="submit" class="submit-btn">Submit</button>
+      <p id="formMessage"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GramHaat • Made with ❤️ for Rural India</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="productModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <img id="modalImg" src="" alt="Product Image" />
+      <h3 id="modalTitle"></h3>
+      <p id="modalPrice"></p>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
